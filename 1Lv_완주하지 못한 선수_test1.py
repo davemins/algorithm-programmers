@@ -26,4 +26,5 @@ def solution(participant, completion):
 정확성: 50.0
 효율성: 0.0
 합계: 50.0 / 100.0
+
 '''
