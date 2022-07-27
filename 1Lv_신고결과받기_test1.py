@@ -75,4 +75,5 @@ print(solution(list ,report, 2))
 채점 결과
 정확성: 66.7
 합계: 66.7 / 100.0
+
 '''
