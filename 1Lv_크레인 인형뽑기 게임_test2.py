@@ -10,6 +10,6 @@ def solution(board, moves):
                 n = len(bag) - 1
                 if n + 1 >= 2 and bag[n - 1] == bag[n]:
                     answer += 2
-                    bag.pop; bag.pop
-                    break
+                    bag.pop(); bag.pop()
+                break
     return answer
