@@ -10,8 +10,8 @@ def solution(board, moves):
                 board[j][i] = 0
                 n = len(bag) - 1
                 if n + 1 >= 2 and bag[n - 1] == bag[n]:
-                    answer += 1
-                    bag.pop; bag.pop
+                    answer += 2
+                    bag.pop(); bag.pop()
                 break
                 
     return answer
