@@ -10,18 +10,17 @@ report에 muzi frodo 이런 식으로 신고자 + 대상자 형태의 문자열�
 
 
 def solution(id_list, report, k):
-
     result = []
-    for value in report:
-        if value not in result:
-            result.append(value)
-    
-    
+    for i in report:
+        if i not in result:
+            result.append(i)
+
     answer = [0 for i in range(len(id_list))]
-    
-    a = []
-    b = []
-    c = []
+    dicanswer = {key : 0 for key in id_list} # 딕셔너리로 바꿈
+
+    a = [] # 신고한 유저
+    b = [] # 신고 당한 유저
+    c = [] # 정지 유저
 
     for i in result:
         a.append(i.split(' ')[0])
@@ -29,15 +28,17 @@ def solution(id_list, report, k):
     for j in result:
         b.append(j.split(' ')[1])
 
-    for m in b:
+    for m in b: # 정지 유저 만들기
         if b.count(m) >= k:
             c.append(m)
 
-    for n in range(len(b)):
+
+    for n in range(len(b)): # 신고 리스트 만들기
         if b[n] in c:
-            for m in range(len(id_list)):
-                if id_list[m] == a[n]:
-                    answer[m] += 1
+            dicanswer[a[n]] += 1
+    
+    for o in range(len(id_list)):
+        answer[o] = dicanswer[id_list[o]]
 
     return answer
 
