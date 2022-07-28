@@ -9,7 +9,6 @@ def solution(participant, completion):
     
     return answer
 '''
-채점을 시작합니다.
 정확성  테스트
 테스트 1 〉	통과 (0.01ms, 10.2MB)
 테스트 2 〉	통과 (0.02ms, 10.1MB)
