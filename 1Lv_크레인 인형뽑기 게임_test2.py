@@ -1,6 +1,7 @@
 def solution(board, moves):
     answer = 0
     bag = [] # 바구니 리스트
+    
     for i in moves:
         i -= 1
         for j in range(len(board)):
@@ -12,4 +13,5 @@ def solution(board, moves):
                     answer += 2
                     bag.pop(); bag.pop()
                 break
+                
     return answer
