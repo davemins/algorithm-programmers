@@ -5,5 +5,3 @@ def solution(n):
             answer = answer + i
 
     return answer
-
-print(solution(12))
