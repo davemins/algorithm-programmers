@@ -4,12 +4,11 @@
 
 
 '''
-def solution(arr):
-    answer = [arr[0]]
-    for i in arr:
-        if i != answer[-1]:
-            answer.append(i)
-
+def solution(t, p):
+    answer = 0
+    for i in range(len(t) - len(p) + 1):
+        if t[i:i + len(p)] <= p:
+            answer += 1
     return answer
 '''
 # 푼 시간
